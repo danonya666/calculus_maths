@@ -12,7 +12,7 @@ a = numpy.array([[2.958, 0.147, 0.354, 0.238, 0.651],
 print(a)
 print("\n")
 
-b = gauss.gaussFunc(a)
+b = gauss.gauss_solve(a)
 print("Gauss is done!")
 print(b)
 
