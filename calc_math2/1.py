@@ -6,11 +6,11 @@ def signs_vary(a, b):
     return a * b <= 0
 
 
-def localize_root(start, end, varyables_gap=1, epsilon_interval=0.01):
+def localize_root(start, end, variables_gap=1, epsilon_interval=0.01):
     # print('start = {}, end = {}'.format(start, end))
     x = start
     while x <= end:
-        x1 = x + varyables_gap
+        x1 = x + variables_gap
         a = 2 - 0.5 * x ** 2 - 0.5 * x ** -1 * sin(x) - x
         b = 2 - 0.5 * x1 ** 2 - 0.5 * x1 ** -1 * sin(x1) - x1
         if signs_vary(a.real, b.real):
