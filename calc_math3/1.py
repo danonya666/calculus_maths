@@ -8,21 +8,18 @@ y = np.array([-2.417, -3.819, -0.642, 0.848, 2.815], dtype=float)
 def interpolation_polynomial_lagrange(x, y, t):
     z = 0
     for j in range(len(y)):
-        p1 = 1;
+        p1 = 1
         p2 = 1
         for i in range(len(x)):
-            if i == j:
-                p1 = p1 * 1;
-                p2 = p2 * 1
-            else:
+            if not i == j:
                 p1 = p1 * (t - x[i])
                 p2 = p2 * (x[j] - x[i])
         z = z + y[j] * p1 / p2
     return z
 
 
-xnew = np.linspace(np.min(x), np.max(x), 100)
+xnew = np.linspace(np.min(x), np.max(x))
 ynew = [interpolation_polynomial_lagrange(x, y, i) for i in xnew]
-plt.plot(x, y, 'o', xnew, ynew)
+plt.plot(x, y, 'go', xnew, ynew)
 plt.grid(True)
 plt.show()
