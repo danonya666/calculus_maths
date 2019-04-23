@@ -22,28 +22,27 @@ def f3(x, *args):
 
 
 def f4(x, *args):
-    a,b,c = args
+    a, b, c = args
     return a * np.sqrt(x) + b * np.sin(x) + c
 
 
-"""popt, pcov = curve_fit(f1, x_data, y_data, p0=[1, 1, 1])
-plt.plot(x_data, y_data, 'o')
-plt.plot(x_data, f1(x_data, *popt), '-')"""
+# popt, pcov = curve_fit(f1, x_data, y_data, p0=[1, 1, 1])
+# plt.plot(x_data, y_data, 'o')
+# plt.plot(x_data, f1(x_data, *popt), '-')
 
 popt, pcov = curve_fit(f2, x_data, y_data, p0=[1, 1, 1])
 plt.plot(x_data, y_data, 'o')
 plt.plot(x_data, f2(x_data, *popt), '-')
 
-"""popt, pcov = curve_fit(f3, x_data, y_data, p0=[1, 1, 1])
-plt.plot(x_data, y_data, 'o')
-plt.plot(x_data, f3(x_data, *popt), '-')"""
-
-"""popt, pcov = curve_fit(f4, x_data, y_data, p0=[1, 1, 1])
-plt.plot(x_data, y_data, 'o')
-plt.plot(x_data, f4(x_data, *popt), '-')"""
-
+# popt, pcov = curve_fit(f3, x_data, y_data, p0=[1, 1, 1])
+# plt.plot(x_data, y_data, 'o')
+# plt.plot(x_data, f3(x_data, *popt), '-')
+#
+# popt, pcov = curve_fit(f4, x_data, y_data, p0=[1, 1, 1])
+# plt.plot(x_data, y_data, 'o')
+# plt.plot(x_data, f4(x_data, *popt), '-')
+#
 plt.show()
-
 
 """
 НОРМАЛЬНАЯ СИСТЕМА УРАВНЕНИЙ
